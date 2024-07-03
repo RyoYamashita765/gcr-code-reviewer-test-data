@@ -4,9 +4,6 @@ public class Main {
 			System.out.println("Hello, Java!");
 		} else {
 			System.out.println("Hello, " + args[0] + "!");
-			for (int i = 1; i <= args.length - 1; i++) {
-				System.out.println("  Hello, " + args[i] + ".");
-			}
 		}
 	}
 }
