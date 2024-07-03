@@ -1,9 +1,17 @@
 public class Main {
 	public static void main(String[] args) {
-		String a = null;
-		System.out.println(a.length());
-
-		int[] arr = { 1, 2, 3 };
-		System.out.println(arr[3]);
+		if (args.length > 0) {
+			if (args.length > 1) {
+				if (args.length > 2) {
+					System.out.println("Too many arguments");
+				} else {
+					System.out.println("Two arguments");
+				}
+			} else {
+				System.out.println("One argument");
+			}
+		} else {
+			System.out.println("No arguments");
+		}
 	}
 }
