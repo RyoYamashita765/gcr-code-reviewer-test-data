@@ -3,7 +3,7 @@ public class Main {
 		System.out.println("Hello World!");
 
 		int a = 10;
-		while (a > 0) {
+		while (a >= 0) {
 			System.out.println(a);
 			a--;
 		}
