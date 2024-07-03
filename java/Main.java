@@ -6,6 +6,9 @@ public class Main {
 			break;
 		default:
 			System.out.println("One or more arguments");
+			for (String arg : args) {
+				System.out.println(arg);
+			}
 			break;
 		}
 	}
