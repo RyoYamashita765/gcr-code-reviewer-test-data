@@ -1,9 +1,7 @@
 public class Main {
 	public static void main(String[] args) {
-		System.out.println("Hello, Main World!");
-
-		for (int i = 0; i < args.length; i++) {
-			System.out.println("args[" + i + "] = " + args[i]);
-		}
+		final double circleRadius = 5.0;
+		final double ciecleArea = 3.141592 * Math.pow(circleRadius, 2);
+		System.out.println("Circle area: " + ciecleArea);
 	}
 }
