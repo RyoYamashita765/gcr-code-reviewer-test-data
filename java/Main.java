@@ -30,10 +30,6 @@ class Cache {
 }
 
 class Printer {
-	public void print() {
-		System.out.println("Hello World!");
-	}
-
 	public void print(String message) {
 		System.out.println(message);
 	}
