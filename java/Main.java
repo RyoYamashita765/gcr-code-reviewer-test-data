@@ -4,11 +4,9 @@ public class Main {
 
 		if (args.length >= 1) {
 			System.out.println("========= Arguments =========");
-			System.out.println("Arguments:");
 			for (String arg : args) {
 				System.out.println("  [" + arg + "]");
 			}
-			System.out.println("-----------------------------");
 		}
 	}
 }
