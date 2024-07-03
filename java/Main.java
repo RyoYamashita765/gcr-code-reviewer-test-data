@@ -3,10 +3,12 @@ public class Main {
 		System.out.println("Hello World!");
 
 		if (args.length >= 1) {
+			System.out.println("===== System Properties =====");
 			System.out.println("Arguments:");
 			for (String arg : args) {
 				System.out.println("  [" + arg + "]");
 			}
+			System.out.println("=============================");
 		}
 	}
 }
