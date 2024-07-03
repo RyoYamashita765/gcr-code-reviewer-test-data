@@ -4,9 +4,6 @@ public class Main {
 		while (answer < 42) {
 			System.out.println("The answer: " + answer);
 			answer += 2;
-			if (answer == 42) {
-				System.out.println("The answer is 42!");
-			}
 		}
 	}
 }
