@@ -1,8 +1,8 @@
 public class Main {
 	public static void main(String[] args) {
 		int answer = 0;
-		while (answer != 42) {
-			System.out.println("answer: " + answer);
+		while (answer < 42) {
+			System.out.println("The answer is " + answer);
 			answer++;
 		}
 	}
