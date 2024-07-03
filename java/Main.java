@@ -13,8 +13,6 @@ public class Main {
 }
 
 interface Printer {
-	void print();
-
 	void printMessage(String message);
 
 	default void printHello() {
