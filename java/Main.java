@@ -5,7 +5,9 @@ public class Main {
 		int a = 10;
 		while (a >= 0) {
 			System.out.println(a);
+			System.out.println("Hello World!");
 			a--;
+			a = a - 1;
 		}
 	}
 }
