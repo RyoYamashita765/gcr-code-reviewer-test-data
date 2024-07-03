@@ -5,9 +5,9 @@ public class Main {
 			System.out.println("No arguments");
 			break;
 		default:
-			System.out.println("One or more arguments");
-			for (String arg : args) {
-				System.out.println(arg);
+			System.out.println("Arguments:");
+			for (int i = 0; i < args.length; i++) {
+				System.out.println(args[i]);
 			}
 			break;
 		}
