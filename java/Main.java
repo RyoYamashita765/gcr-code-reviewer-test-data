@@ -11,16 +11,3 @@ public class Main {
 		Printer printer = new Printer();
 	}
 }
-
-class Dummy {
-}
-
-class Cache {
-	String cache;
-}
-
-class Printer {
-	public void print(String message) {
-		System.out.println(message);
-	}
-}
