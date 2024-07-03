@@ -8,11 +8,11 @@ public class Main {
 				break;
 			case 2:
 				System.out.println("One argument");
-				System.out.println("Argument: " + args[0]);
+				System.out.println("Argument: " + args[1]);
 				break;
 			default:
 				System.out.println("More than one argument");
-				System.out.println("Arguments:");
+				System.out.println("Arguments: " + args[0]);
 				break;
 		}
 	}
