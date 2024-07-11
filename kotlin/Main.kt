@@ -1,9 +1,9 @@
 fun main() {
     val answer = 42
     when (answer - 1) {
-        42 -> {
+        41 -> {
             println("The answer is 42.")
-            println(answer)
+            println(answer + 1)
         }
         else -> println("The answer is not 42.")
     }
