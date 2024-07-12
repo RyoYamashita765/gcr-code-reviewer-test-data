@@ -1,18 +1,32 @@
-open class Logger {
-    fun log(message: String) {
-        println("Logging: $message")
+class UserService {
+    private val userRepository = UserRepository()
+    private val emailService = EmailService()
+
+    fun registerUser(username: String, email: String) {
+        if (userRepository.isEmailTaken(email)) {
+            throw IllegalArgumentException("Email is already registered")
+        }
+
+        val user = User(username, email)
+        userRepository.save(user)
+        emailService.sendWelcomeEmail(email)
     }
 }
 
-class FileLogger : Logger() {
-    fun saveToFile(fileName: String) {
-        println("Saving to file: $fileName")
+class UserRepository {
+    fun isEmailTaken(email: String): Boolean {
+        val user = SampleDatabase.findUserByEmail(email)
+        return user != null
+    }
+
+    fun save(user: User) {
+        SampleDatabase.saveUser(user)
     }
 }
 
-class NetworkLogger : Logger() {
-    fun sendToServer(url: String) {
-        println("Sending to server: $url")
+class EmailService {
+    fun sendWelcomeEmail(email: String) {
+        SampleClient.sendEmail(email, "Welcome to our service!")
     }
 }
 
@@ -20,13 +34,8 @@ public class Main {
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
-            val fileLogger = FileLogger()
-            fileLogger.log("File log message")
-            fileLogger.saveToFile("log.txt")
-
-            val networkLogger = NetworkLogger()
-            networkLogger.log("Network log message")
-            networkLogger.sendToServer("http://example.com")
+            val userService = UserService()
+            userService.registerUser("johndoe", "john@example.com")
         }
     }
 }
