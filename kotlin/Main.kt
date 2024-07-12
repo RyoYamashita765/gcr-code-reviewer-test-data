@@ -1,19 +1,32 @@
-class UserService(private val userRepository: UserRepository) {
-
-    fun getUserById(id: Long) = userRepository.findById(id)
-
-    fun createUser(name: String, email: String) {
-        val user = User(name = name, email = email)
-        userRepository.save(user)
+open class Logger {
+    fun log(message: String) {
+        println("Logging: $message")
     }
+}
 
-    fun updateUserEmail(id: Long, newEmail: String) =
-        userRepository.findById(id)?.let { user ->
-            user.email = newEmail
-            userRepository.save(user)
+class FileLogger : Logger() {
+    fun saveToFile(fileName: String) {
+        println("Saving to file: $fileName")
+    }
+}
+
+class NetworkLogger : Logger() {
+    fun sendToServer(url: String) {
+        println("Sending to server: $url")
+    }
+}
+
+public class Main {
+    companion object {
+        @JvmStatic
+        fun main(args: Array<String>) {
+            val fileLogger = FileLogger()
+            fileLogger.log("File log message")
+            fileLogger.saveToFile("log.txt")
+
+            val networkLogger = NetworkLogger()
+            networkLogger.log("Network log message")
+            networkLogger.sendToServer("http://example.com")
         }
-
-    fun deleteUser(id: Long) = userRepository.deleteById(id)
-
-    fun searchUsers(query: String) = userRepository.search(query)
+    }
 }
