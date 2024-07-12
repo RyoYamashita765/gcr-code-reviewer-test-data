@@ -2,13 +2,11 @@ public class Main {
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
-            var result = ""
-            if (args.size == 0) {
-                result = "Hello, World!"
-            } else {
-                result = "Hello, ${args[0]}!"
-            }
-            println(result)
+            val str1: String? = null
+            println("The length of str1 is ${str1.length}")
+
+            val arr = arrayOf(1, 2, 3)
+            println(arr[4])
         }
     }
 }
