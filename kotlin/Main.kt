@@ -2,11 +2,19 @@ public class Main {
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
-            val str1: String? = null
-            println("The length of str1 is ${str1.length}")
-
-            val arr = arrayOf(1, 2, 3)
-            println(arr[4])
+            if (args.size > 0) {
+                if (args.size > 1) {
+                    if (args.size > 2) {
+                        println("Too many arguments")
+                    } else {
+                        println("Two arguments")
+                    }
+                } else {
+                    println("One argument")
+                }
+            } else {
+                println("No arguments")
+            }
         }
     }
 }
