@@ -1,29 +1,29 @@
-class Customer(val isPremium: Boolean, val loyaltyYears: Int, val purchaseCount: Int)
+import kotlinx.coroutines.runBlocking
+import java.time.LocalDateTime
+import kotlin.math.pow
+import java.util.*
+import kotlinx.coroutines.delay
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import kotlin.random.Random
+import java.io.File
+import android.widget.TextView
 
-fun getDiscountPercentage(customer: Customer): Int {
-    if (customer.isPremium) {
-        if (customer.loyaltyYears > 5) {
-            return 20
-        } else {
-            return 15
-        }
-    } else {
-        if (customer.purchaseCount > 10) {
-            return 10
-        } else {
-            return 5
-        }
-    }
-}
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-public class Main {
-    companion object {
-        @JvmStatic
-        fun main(args: Array<String>) {
-            val customer = Customer(true, 6, 10)
-            val discount = getDiscountPercentage(customer)
-            println("Customer: ${customer.isPremium}, ${customer.loyaltyYears}, ${customer.purchaseCount}")
-            println("Discount: $discount%")
+        val textView = findViewById<TextView>(R.id.textView)
+        val currentTime = LocalDateTime.now()
+        val randomNumber = Random.nextDouble().pow(2)
+
+        runBlocking {
+            delay(1000)
+            textView.text = "Current time: $currentTime\nRandom number: $randomNumber"
         }
+
+        val file = File("example.txt")
+        file.writeText(UUID.randomUUID().toString())
     }
 }
