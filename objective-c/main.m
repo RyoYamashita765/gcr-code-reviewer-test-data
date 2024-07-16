@@ -33,7 +33,7 @@ int main(int argc, const char * argv[]) {
         [person setAge:30];
         NSLog(@"Name: %@", [person getName]);
         NSLog(@"Age: %d", [person getAge]);
-        for (int i = 0; i < 10; i++) {
+        for (int i = 1; i <= 10; i++) {
             NSLog(@"i = %d", i);
         }
     }
