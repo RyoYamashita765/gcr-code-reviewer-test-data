@@ -39,6 +39,7 @@ int main(int argc, const char * argv[]) {
                 break;
             default:
                 NSLog(@"Age is not 30");
+                NSLog(@"Age is %d", [person getAge]);
                 break;
         }
     }
