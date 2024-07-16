@@ -33,7 +33,7 @@ int main(int argc, const char * argv[]) {
         [person setAge:30];
         NSLog(@"Name: %@", [person getName]);
         NSLog(@"Age: %d", [person getAge]);
-        if ([person getAge] > 18) {
+        if ([person getAge] >= 18) {
             NSLog(@"Type: Adult");
         } else {
             NSLog(@"Type: Child");
