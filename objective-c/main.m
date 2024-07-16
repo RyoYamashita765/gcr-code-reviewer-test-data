@@ -33,11 +33,6 @@ int main(int argc, const char * argv[]) {
         [person setAge:30];
         NSLog(@"Name: %@", [person getName]);
         NSLog(@"Age: %d", [person getAge]);
-        int a = 10;
-        while (a <= 20) {
-            NSLog(@"a = %d", a);
-            a++;
-        }
     }
     return 0;
 }
