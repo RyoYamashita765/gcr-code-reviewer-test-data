@@ -35,8 +35,6 @@ int main(int argc, const char * argv[]) {
         NSLog(@"Age: %d", [person getAge]);
         for (int i = 0; i <= 10; i++) {
             NSLog(@"i = [%d]", i);
-            NSLog(@"i + i = [%d]", i + i);
-            NSLog(@"====================");
         }
     }
     return 0;
