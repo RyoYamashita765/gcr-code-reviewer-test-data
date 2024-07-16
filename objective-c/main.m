@@ -28,9 +28,9 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         NSLog(@"Hello, World!");
-        NSLog(@"----------------");
-        NSLog(@"Objective-C Example");
-        NSLog(@"----------------");
+        NSLog(@"===============");
+        NSLog(@"Objective C Sample");
+        NSLog(@"===============");
         Person *person = [[Person alloc] init];
         [person setName:@"John"];
         [person setAge:30];
