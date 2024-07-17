@@ -12,6 +12,7 @@
 
 @implementation Bicycle;
 - (void) startEngine {
+    NSLog(@"startEngine: %@", self);
     NSLog(@"Go!");
 }
 @end
@@ -22,6 +23,7 @@
 
 @implementation Motorcycle;
 - (void) startEngine {
+    NSLog(@"startEngine: %@", self);
     NSLog(@"Vroom!");
 }
 @end
