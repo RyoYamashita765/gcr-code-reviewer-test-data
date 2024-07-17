@@ -30,6 +30,7 @@
 
 @interface Student : Person {
     NSString *school;
+    int grade;
 }
 - (void)setSchool:(NSString *)newSchool;
 - (NSString *)getSchool;
