@@ -34,11 +34,11 @@ int main(int argc, const char * argv[]) {
         NSLog(@"Name: %@", [person getName]);
         NSLog(@"Age: %d", [person getAge]);
         for (int i = 0; i <= 10; i++) {
-            NSLog(@"====================");
+            NSLog(@"         =          ");
             NSLog(@"--------------------");
             NSLog(@"i = [%d]", i);
             NSLog(@"--------------------");
-            NSLog(@"====================");
+            NSLog(@"         =          ");
         }
     }
     return 0;
