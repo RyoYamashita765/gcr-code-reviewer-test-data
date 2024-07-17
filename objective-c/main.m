@@ -35,11 +35,11 @@ int main(int argc, const char * argv[]) {
         NSLog(@"Age: %d", [person getAge]);
         int a = 10;
         while (a <= 20) {
-            NSLog(@"=====================");
+            NSLog(@"---------------------");
             NSLog(@"value of a: %d", a);
             a++;
             a++;
-            NSLog(@"=====================");
+            NSLog(@"---------------------");
         }
     }
     return 0;
