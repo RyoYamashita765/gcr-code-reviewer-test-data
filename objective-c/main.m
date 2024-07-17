@@ -37,6 +37,8 @@ int main(int argc, const char * argv[]) {
         while (a <= 20) {
             NSLog(@"a = %d", a);
             a++;
+            a++;
+            a++;
         }
     }
     return 0;
