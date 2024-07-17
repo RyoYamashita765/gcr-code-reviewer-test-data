@@ -30,7 +30,7 @@
 
 @interface Student : Person {
     NSString *school;
-    int grade;
+    int gradeNumber;
     NSString *job;
     NSString *hobby;
 }
