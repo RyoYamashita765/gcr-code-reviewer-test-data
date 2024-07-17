@@ -33,17 +33,6 @@ int main(int argc, const char * argv[]) {
         [person setAge:30];
         NSLog(@"Name: %@", [person getName]);
         NSLog(@"Age: %d", [person getAge]);
-        switch ([person getAge] + 1) {
-            case 30:
-                NSLog(@"Age is 30");
-                break;
-            case 32:
-                NSLog(@"Age is 31");
-                break;
-            default:
-                NSLog(@"Age is %d", [person getAge]);
-                break;
-        }
     }
     return 0;
 }
