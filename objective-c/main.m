@@ -27,16 +27,16 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSLog(@"Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        NSLog(@"Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.");
+        NSLog(@"Deserunt mollit anim id est laborum.");
+        NSLog(@"Sed ut perspiciatis unde omnis iste natus...");
         NSLog(@"Hello, World!");
         Person *person = [[Person alloc] init];
         [person setName:@"John"];
         [person setAge:30];
         NSLog(@"Name: %@", [person getName]);
         NSLog(@"Age: %d", [person getAge]);
-        NSLog(@"Goodbye, World!");
-        NSLog(@"Duis aute irure dolor in reprehenderit in voluptate ...");
+        NSLog(@"Ut enim ad minima veniam, quis nostrum exercitationem ...");
+        NSLog(@"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore...");
     }
     return 0;
 }
