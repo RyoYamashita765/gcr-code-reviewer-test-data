@@ -2,8 +2,8 @@
 
 @implementation Person
 - (void)hello {
-    NSLog(@"------------------");
+    NSLog(@"==================");
     NSLog(@"Hello");
-    NSLog(@"------------------");
+    NSLog(@"==================");
 }
 @end
