@@ -34,13 +34,13 @@ int main(int argc, const char * argv[]) {
         NSLog(@"Name: %@", [person getName]);
         NSLog(@"Age: %d", [person getAge]);
 
-        NSLog(@"Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        NSLog(@"Quis nostrud exercitation ullamco laboris nisi ...");
 
 
         NSLog(@"Hello, World!");
 
 
-        NSLog(@"Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.");
+        NSLog(@"Duis aute irure dolor in reprehenderit in voluptate ...");
     }
     return 0;
 }
