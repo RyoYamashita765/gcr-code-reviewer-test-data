@@ -23,6 +23,9 @@
 - (int)getAge {
     return self->age;
 }
+- (void)helloWorld {
+    NSLog(@"Hello, World!");
+}
 @end
 
 int main(int argc, const char * argv[]) {
