@@ -6,9 +6,6 @@
 @implementation Car;
 @end
 
-@interface Engine : NSObject;
-@end
-
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         Car *car = [[Car alloc] init];
