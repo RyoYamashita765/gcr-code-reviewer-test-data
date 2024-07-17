@@ -7,6 +7,7 @@
 @end
 
 @interface Engine : NSObject;
+- (void)start;
 @end
 
 int main(int argc, const char * argv[]) {
