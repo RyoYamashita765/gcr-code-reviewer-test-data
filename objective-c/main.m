@@ -32,7 +32,6 @@
     NSString *school;
     int gradeNumber;
     NSString *jobName;
-    NSString *hobbyName;
 }
 - (void)setSchool:(NSString *)newSchool;
 - (NSString *)getSchool;
