@@ -25,7 +25,6 @@
 }
 - (void)helloWorld {
     NSLog(@"Hello, World!");
-    NSLog(@"Name: %@", [self getName]);
 }
 @end
 
@@ -34,7 +33,6 @@ int main(int argc, const char * argv[]) {
         Person *person = [[Person alloc] init];
         [person setName:@"John"];
         [person setAge:20];
-        [person helloWorld];
     }
     return 0;
 }
