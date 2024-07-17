@@ -1,17 +1,24 @@
 #import <Foundation/Foundation.h>
 
-@interface Car : NSObject
+@interface Car : NSObject;
 @end
 
 @implementation Car;
+- (void)startEngine {
+    NSLog(@"Vroom!");
+}
 @end
 
 @interface Bicycle : NSObject {
     NSString *name;
 }
+- (NSString *)getName;
 @end
 
 @implementation Bicycle;
+- (NSString *)getName {
+    return name;
+}
 @end
 
 @interface Motorcycle : NSObject
