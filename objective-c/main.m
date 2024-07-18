@@ -2,12 +2,21 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSString *str1 = nil;
-        NSLog(@"The length of str1 is %lu", (unsigned long)[str1 length]);
-        
-        NSArray *arr = @[@1, @2, @3];
-        id element = arr[4];
-        NSLog(@"Element at index 4: %@", element);
+        int argCount = argc - 1;
+
+        if (argCount > 0) {
+            if (argCount > 1) {
+                if (argCount > 2) {
+                    NSLog(@"Too many arguments");
+                } else {
+                    NSLog(@"Two arguments");
+                }
+            } else {
+                NSLog(@"One argument");
+            }
+        } else {
+            NSLog(@"No arguments");
+        }
     }
     return 0;
 }
