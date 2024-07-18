@@ -1,44 +1,90 @@
 #import <Foundation/Foundation.h>
 
-@interface Logger : NSObject
-- (void)logWithMessage:(NSString *)message;
+@interface User : NSObject
+@property (nonatomic, strong) NSString *username;
+@property (nonatomic, strong) NSString *email;
+
+- (instancetype)initWithUsername:(NSString *)username email:(NSString *)email;
 @end
 
-@implementation Logger
-- (void)logWithMessage:(NSString *)message {
-    NSLog(@"Logging: %@", message);
+@implementation User
+- (instancetype)initWithUsername:(NSString *)username email:(NSString *)email {
+    self = [super init];
+    if (self) {
+        _username = username;
+        _email = email;
+    }
+    return self;
 }
 @end
 
-@interface FileLogger : Logger
-- (void)saveToFile:(NSString *)fileName;
+@interface UserRepository : NSObject
+- (BOOL)isEmailTaken:(NSString *)email;
+- (void)saveUser:(User *)user;
 @end
 
-@implementation FileLogger
-- (void)saveToFile:(NSString *)fileName {
-    NSLog(@"Saving to file: %@", fileName);
+@implementation UserRepository
+- (BOOL)isEmailTaken:(NSString *)email {
+    // Assume SampleDatabase is a class with class methods
+    User *user = [SampleDatabase findUserByEmail:email];
+    return user != nil;
+}
+
+- (void)saveUser:(User *)user {
+    [SampleDatabase saveUser:user];
 }
 @end
 
-@interface NetworkLogger : Logger
-- (void)sendToServer:(NSString *)url;
+@interface EmailService : NSObject
+- (void)sendWelcomeEmail:(NSString *)email;
 @end
 
-@implementation NetworkLogger
-- (void)sendToServer:(NSString *)url {
-    NSLog(@"Sending to server: %@", url);
+@implementation EmailService
+- (void)sendWelcomeEmail:(NSString *)email {
+    // Assume SampleClient is a class with class methods
+    [SampleClient sendEmail:email withMessage:@"Welcome to our service!"];
 }
+@end
+
+@interface UserService : NSObject
+@property (nonatomic, strong) UserRepository *userRepository;
+@property (nonatomic, strong) EmailService *emailService;
+@end
+
+@implementation UserService
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _userRepository = [[UserRepository alloc] init];
+        _emailService = [[EmailService alloc] init];
+    }
+    return self;
+}
+
+- (void)registerUserWithUsername:(NSString *)username email:(NSString *)email {
+    if ([self.userRepository isEmailTaken:email]) {
+        @throw [NSException exceptionWithName:NSInvalidArgumentException
+                                       reason:@"Email is already registered"
+                                     userInfo:nil];
+    }
+    
+    User *user = [[User alloc] initWithUsername:username email:email];
+    [self.userRepository saveUser:user];
+    [self.emailService sendWelcomeEmail:email];
+}
+
 @end
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        FileLogger *fileLogger = [[FileLogger alloc] init];
-        [fileLogger logWithMessage:@"File log message"];
-        [fileLogger saveToFile:@"log.txt"];
-
-        NetworkLogger *networkLogger = [[NetworkLogger alloc] init];
-        [networkLogger logWithMessage:@"Network log message"];
-        [networkLogger sendToServer:@"http://example.com"];
+        UserService *userService = [[UserService alloc] init];
+        @try {
+            [userService registerUserWithUsername:@"johndoe" email:@"john@example.com"];
+            NSLog(@"User registered successfully");
+        } @catch (NSException *exception) {
+            NSLog(@"Failed to register user: %@", exception.reason);
+        }
     }
     return 0;
 }
