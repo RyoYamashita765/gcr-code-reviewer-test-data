@@ -10,6 +10,7 @@ var b = 20
 var c = a + b
 if c > 20 {
     print("Sum is greater than 20")
+    print("Sum is \(c)")
 } else {
     print("Sum is less than 20")
 }
