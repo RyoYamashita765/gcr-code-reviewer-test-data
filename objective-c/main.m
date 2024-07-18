@@ -1,13 +1,6 @@
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
 
-@interface DatabaseManager : NSObject
-
-- (instancetype)initWithDatabasePath:(NSString *)path;
-- (NSArray<NSDictionary *> *)selectWithQuery:(NSString *)query;
-
-@end
-
 @implementation DatabaseManager {
     sqlite3 *_database;
 }
