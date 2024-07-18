@@ -11,6 +11,8 @@ var c = a + b
 if c > 20 {
     print("Sum is greater than 20")
     print("Sum is \(c)")
+    print("======================")
+    print("=== End of Program ===")
 } else {
     print("Sum is less than 20")
 }
