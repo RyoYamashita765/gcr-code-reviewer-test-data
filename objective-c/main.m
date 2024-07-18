@@ -1,56 +1,44 @@
 #import <Foundation/Foundation.h>
-#import <sqlite3.h>
 
-@implementation DatabaseManager {
-    sqlite3 *_database;
+@interface Logger : NSObject
+- (void)logWithMessage:(NSString *)message;
+@end
+
+@implementation Logger
+- (void)logWithMessage:(NSString *)message {
+    NSLog(@"Logging: %@", message);
 }
+@end
 
-- (instancetype)initWithDatabasePath:(NSString *)path {
-    self = [super init];
-    if (self) {
-        if (sqlite3_open([path UTF8String], &_database) != SQLITE_OK) {
-            NSLog(@"Failed to open database");
-            return nil;
-        }
-    }
-    return self;
+@interface FileLogger : Logger
+- (void)saveToFile:(NSString *)fileName;
+@end
+
+@implementation FileLogger
+- (void)saveToFile:(NSString *)fileName {
+    NSLog(@"Saving to file: %@", fileName);
 }
+@end
 
-- (void)dealloc {
-    sqlite3_close(_database);
+@interface NetworkLogger : Logger
+- (void)sendToServer:(NSString *)url;
+@end
+
+@implementation NetworkLogger
+- (void)sendToServer:(NSString *)url {
+    NSLog(@"Sending to server: %@", url);
 }
-
-- (NSArray<NSDictionary *> *)selectWithQuery:(NSString *)query {
-    NSMutableArray<NSDictionary *> *output = [NSMutableArray array];
-    sqlite3_stmt *statement;
-    
-    if (sqlite3_prepare_v2(_database, [query UTF8String], -1, &statement, nil) == SQLITE_OK) {
-        while (sqlite3_step(statement) == SQLITE_ROW) {
-            NSMutableDictionary *row = [NSMutableDictionary dictionary];
-            for (int i = 0; i < sqlite3_column_count(statement); i++) {
-                NSString *columnName = [NSString stringWithUTF8String:sqlite3_column_name(statement, i)];
-                NSString *value = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(statement, i)];
-                row[columnName] = value;
-            }
-            [output addObject:row];
-        }
-    } else {
-        NSLog(@"Failed to prepare statement");
-    }
-    
-    sqlite3_finalize(statement);
-    return output;
-}
-
 @end
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        DatabaseManager *databaseManager = [[DatabaseManager alloc] initWithDatabasePath:@"/path/to/your/database.sqlite"];
-        NSArray<NSDictionary *> *result = [databaseManager selectWithQuery:@"SELECT * FROM test_table"];
-        for (NSDictionary *row in result) {
-            NSLog(@"%@", row);
-        }
+        FileLogger *fileLogger = [[FileLogger alloc] init];
+        [fileLogger logWithMessage:@"File log message"];
+        [fileLogger saveToFile:@"log.txt"];
+
+        NetworkLogger *networkLogger = [[NetworkLogger alloc] init];
+        [networkLogger logWithMessage:@"Network log message"];
+        [networkLogger sendToServer:@"http://example.com"];
     }
     return 0;
 }
