@@ -8,11 +8,9 @@ case 1:
     print("path: \(CommandLine.arguments[0])")
 case 2:
     print("One argument")
-    print(CommandLine.argc)
     print("path: \(CommandLine.arguments[0])")
     print("arg: \(CommandLine.arguments[1])")
 default:
     print("Many arguments")
-    print(CommandLine.argc)
     print(CommandLine.arguments[2])
 }
