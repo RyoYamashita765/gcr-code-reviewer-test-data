@@ -11,7 +11,6 @@ case 2:
     print(CommandLine.argc)
     print("path: \(CommandLine.arguments[0])")
     print("arg: \(CommandLine.arguments[1])")
-    print(CommandLine.arguments)
 default:
     print("Many arguments")
     print(CommandLine.argc)
