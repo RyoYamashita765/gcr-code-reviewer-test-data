@@ -10,4 +10,6 @@ case 2:
     print(CommandLine.arguments[1])
 default:
     print("Many arguments")
+    print(CommandLine.argc)
+    print(CommandLine.arguments)
 }
