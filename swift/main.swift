@@ -11,6 +11,5 @@ for i in 1..<30 {
     print("  i * 3 = \(i * 3)")
     print("  i * i = \(i * i)")
     print("  i % 2 = \(i % 2)")
-    print("  i %  5= \(i % 5)")
     print("end")
 }
