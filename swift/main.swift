@@ -17,7 +17,5 @@ if c >= 20 {
     print("=== End of Program ===")
 } else {
     print("Sum is less than 20")
-    print("a = \(a)")
-    print("b = \(b)")
     print("Sum = \(c)")
 }
