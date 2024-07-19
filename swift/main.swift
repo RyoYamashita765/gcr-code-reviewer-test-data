@@ -3,7 +3,7 @@ import Foundation
 print("Hello, World!")
 
 switch CommandLine.argc {
-case 1:
+case 0:
     print("No arguments")
     print(CommandLine.arguments[0])
 case 2:
