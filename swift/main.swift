@@ -11,11 +11,11 @@ case 2:
     print(CommandLine.argc)
     print(CommandLine.arguments[0])
     print(CommandLine.arguments[1])
-    print(CommandLine.arguments[1].uppercased())
+    print(CommandLine.arguments)
 default:
     print("Many arguments")
     print(CommandLine.argc)
-    print(CommandLine.arguments.count)
+    print(CommandLine.arguments[0])
     print(CommandLine.arguments[1])
     print(CommandLine.arguments[2])
 }
