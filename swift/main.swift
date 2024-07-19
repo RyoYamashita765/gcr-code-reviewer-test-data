@@ -2,8 +2,8 @@ import Foundation
 
 print("Hello, World!")
 
-for i in 0..<20 {
-    print("===========")
+for i in 1..<20 {
+    print("")
     print("[i = \(i)]")
     print("  i + 1 = \(i + 1)")
     print("  i - 1 = \(i - 1)")
