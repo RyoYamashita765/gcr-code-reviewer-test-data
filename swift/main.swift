@@ -15,7 +15,7 @@ case 2:
 default:
     print("Many arguments")
     print(CommandLine.argc)
-    print(CommandLine.arguments)
-    print(CommandLine.arguments[0])
+    print(CommandLine.arguments.count)
+    print(CommandLine.arguments[1])
     print(CommandLine.arguments[2])
 }
