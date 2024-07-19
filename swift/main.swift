@@ -2,7 +2,7 @@ import Foundation
 
 print("Hello, World!")
 
-for i in 0..<10 {
+for i in 0..<20 {
     print("===========")
     print("[i = \(i)]")
     print("  i + 1 = \(i + 1)")
