@@ -8,7 +8,7 @@ print("Goodbye, World!")
 var a = 10
 var b = 20
 var c = a + b
-if c > 20 {
+if c >= 20 {
     print("== Start of Program ==")
     print("Sum is greater than 20")
     print("a is \(a)")
