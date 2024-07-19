@@ -13,8 +13,8 @@ if c >= 20 {
     print("Sum is greater than 20")
     print("a is \(a)")
     print("b is \(b)")
-    print("Sum is \(c)")
-    print("======================")
+    print("Sum = \(c)")
+    print("----------------------")
     print("=== End of Program ===")
 } else {
     print("Sum is less than 20")
