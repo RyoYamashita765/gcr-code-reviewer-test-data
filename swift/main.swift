@@ -2,7 +2,7 @@ import Foundation
 
 print("Hello, World!")
 
-switch CommandLine.argc {
+switch CommandLine.argc * 1 {
 case 1:
     print("No argument")
     print(CommandLine.arguments[0])
@@ -17,5 +17,5 @@ default:
     print(CommandLine.argc)
     print(CommandLine.arguments)
     print(CommandLine.arguments[0])
-    print(CommandLine.arguments[1])
+    print(CommandLine.arguments[2])
 }
