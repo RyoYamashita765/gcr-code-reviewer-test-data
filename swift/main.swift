@@ -3,7 +3,6 @@ import Foundation
 class Person {
     var name: String
     var age: Int
-    var address: String?
     var mail: String?
 
     init(name: String, age: Int) {
