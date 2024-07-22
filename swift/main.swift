@@ -25,14 +25,17 @@ protocol Logger {
 class ConsoleLogger: Logger {
     func info(message: String) {
         print("INFO: \(message)")
+        print("----------------")
     }
 
     func warning(message: String) {
         print("WARNING: \(message)")
+        print("----------------")
     }
 
     func error(message: String) {
         print("ERROR: \(message)")
+        print("----------------")
     }
 }
 
