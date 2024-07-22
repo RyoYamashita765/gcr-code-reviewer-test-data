@@ -26,13 +26,13 @@ protocol Logger {
     func info(message: String)
     func warning(message: String)
     func error(message: String)
-    func setLogLevel(level: Int)
+    func setLevel(level: Int)
 }
 
 class ConsoleLogger: Logger {
     var logLevel: Int = 0
 
-    func setLogLevel(level: Int) {
+    func setLevel(level: Int) {
         self.logLevel = level
     }
 
