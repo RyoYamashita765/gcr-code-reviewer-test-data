@@ -3,6 +3,7 @@ import Foundation
 class Person {
     var name: String
     var age: Int
+    var address: String?
 
     init(name: String, age: Int) {
         self.name = name
