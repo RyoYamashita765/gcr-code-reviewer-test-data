@@ -14,13 +14,7 @@ class Person {
     }
 }
 
-protocol Logger {
-    func info(message: String)
-    func warning(message: String)
-    func error(message: String)
-}
-
-class ConsoleLogger: Logger {
+class ConsoleLogger {
 
     func info(message: String) {
         print("INFO: \(message)")
