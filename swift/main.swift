@@ -46,11 +46,6 @@ class ConsoleLogger: Logger {
         print("ERROR: \(message)")
         print("================")
     }
-
-    func debug(message: String) {
-        print("DEBUG: \(message)")
-        print("----------------")
-    }
 }
 
 let logger = ConsoleLogger()
