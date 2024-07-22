@@ -14,7 +14,7 @@ class Person {
     func sayHello() {
         print("Hello, \(name)!")
         print("You are \(age) years old.")
-        print("Your address is \(address ?? "unknown").")
+        print("Your mail is \(mail ?? "N/A")")
     }
 
     func setAddress(address: String) {
@@ -38,7 +38,7 @@ class ConsoleLogger: Logger {
 
     func warning(message: String) {
         print("WARNING: \(message)")
-        print("----------------")
+        print("================")
     }
 
     func error(message: String) {
