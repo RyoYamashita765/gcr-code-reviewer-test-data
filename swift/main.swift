@@ -16,10 +16,6 @@ class Person {
         print("You are \(age) years old.")
         print("Your mail is \(mail ?? "N/A")")
     }
-
-    func setAddress(address: String) {
-        self.address = address
-    }
 }
 
 protocol Logger {
@@ -38,12 +34,6 @@ class ConsoleLogger: Logger {
 
     func warning(message: String) {
         print("WARNING: \(message)")
-        print("================")
-    }
-
-    func error(message: String) {
-        print("----------------")
-        print("ERROR: \(message)")
         print("================")
     }
 }
