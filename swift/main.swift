@@ -3,7 +3,6 @@ import Foundation
 class Person {
     var name: String
     var age: Int
-    var mail: String?
 
     init(name: String, age: Int) {
         self.name = name
@@ -24,7 +23,6 @@ protocol Logger {
 }
 
 class ConsoleLogger: Logger {
-    var logLevel: Int = 0
 
     func info(message: String) {
         print("INFO: \(message)")
