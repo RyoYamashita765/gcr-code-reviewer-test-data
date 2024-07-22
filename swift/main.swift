@@ -14,18 +14,6 @@ class Person {
     }
 }
 
-class ConsoleLogger {
-
-    func info(message: String) {
-        print("INFO: \(message)")
-    }
-
-    func warning(message: String) {
-        print("WARNING: \(message)")
-        print("================")
-    }
-}
-
 let logger = ConsoleLogger()
 logger.info(message: "Hello, World!")
 let person = Person(name: "John", age: 30)
