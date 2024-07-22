@@ -33,7 +33,7 @@ class ConsoleLogger: Logger {
 
     func info(message: String) {
         print("INFO: \(message)")
-        print("----------------")
+        print("================")
     }
 
     func warning(message: String) {
@@ -44,7 +44,7 @@ class ConsoleLogger: Logger {
     func error(message: String) {
         print("----------------")
         print("ERROR: \(message)")
-        print("----------------")
+        print("================")
     }
 
     func debug(message: String) {
