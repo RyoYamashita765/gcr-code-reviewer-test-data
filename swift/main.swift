@@ -15,6 +15,12 @@ class Person {
     }
 }
 
+protocol Logger {
+    func info(message: String)
+    func warning(message: String)
+    func error(message: String)
+}
+
 print("Hello, World!")
 let person = Person(name: "John", age: 30)
 print("Person: \(person.name), \(person.age)")
