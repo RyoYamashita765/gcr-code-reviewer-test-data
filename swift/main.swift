@@ -21,7 +21,22 @@ protocol Logger {
     func error(message: String)
 }
 
-print("Hello, World!")
+class ConsoleLogger: Logger {
+    func info(message: String) {
+        print("INFO: \(message)")
+    }
+
+    func warning(message: String) {
+        print("WARNING: \(message)")
+    }
+
+    func error(message: String) {
+        print("ERROR: \(message)")
+    }
+}
+
+let logger = ConsoleLogger()
+logger.info(message: "Hello, World!")
 let person = Person(name: "John", age: 30)
-print("Person: \(person.name), \(person.age)")
+logger.info(message: "Person: \(person.name), \(person.age)")
 person.sayHello()
