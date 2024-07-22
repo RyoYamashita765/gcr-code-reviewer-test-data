@@ -3,7 +3,7 @@ import Foundation
 print("Hello, World!")
 
 var a = 1
-while a <= 20 {
+while a <= 30 {
     print("[a = \(a)]")
     print("  a + 1 = \(a + 1)")
     print("  a + 2 = \(a + 2)")
@@ -11,7 +11,7 @@ while a <= 20 {
     print("  a + a = \(a + a)")
     print("  a + a + a = \(a + a + a)")
     print("  a * a = \(a * a)")
-    print("  a * a + a = \(a * a + a)")
+    print("  a * a + 1 = \(a * a + 1)")
     print("  a * a - a = \(a * a - a)")
     print("  a * a * a = \(a * a * a)")
     print("")
