@@ -15,6 +15,10 @@ class Person {
         print("You are \(age) years old.")
         print("----------------")
     }
+
+    func setAddress(address: String) {
+        self.address = address
+    }
 }
 
 protocol Logger {
@@ -37,6 +41,11 @@ class ConsoleLogger: Logger {
     func error(message: String) {
         print("----------------")
         print("ERROR: \(message)")
+        print("----------------")
+    }
+
+    func debug(message: String) {
+        print("DEBUG: \(message)")
         print("----------------")
     }
 }
