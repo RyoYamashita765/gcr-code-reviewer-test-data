@@ -1,29 +1,21 @@
 import Foundation
 
-class DatabaseManager {
-    func saveData(_ data: String) {
-        print("Saving data: \(data)")
-    }
+let numbers = [1, 2, 3, 4, 5]
+var squaredNumbers: [Int] = []
+
+for number in numbers {
+    let squared = number * number
+    squaredNumbers.append(squared)
 }
 
-class NetworkManager {
-    func sendData(_ data: String) {
-        print("Sending data: \(data)")
-    }
+print("Squared numbers: \(squaredNumbers)")
+
+let names = ["Alice", "Bob", "Charlie"]
+var upperCaseNames: [String] = []
+
+for name in names {
+    let upperCaseName = name.uppercased()
+    upperCaseNames.append(upperCaseName)
 }
 
-class DataProcessor {
-    let databaseManager = DatabaseManager()
-    let networkManager = NetworkManager()
-
-    func processData(_ data: String) {
-        let processedData = data.uppercased()
-
-        databaseManager.saveData(processedData)
-
-        networkManager.sendData(processedData)
-    }
-}
-
-let processor = DataProcessor()
-processor.processData("Hello, World!")
+print("Uppercase names: \(upperCaseNames)")
