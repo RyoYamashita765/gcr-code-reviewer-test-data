@@ -1,21 +1,28 @@
 import Foundation
 
-let numbers = [1, 2, 3, 4, 5]
-var squaredNumbers: [Int] = []
+func checkAge(age: Int) -> String {
+    var message: String
 
-for number in numbers {
-    let squared = number * number
-    squaredNumbers.append(squared)
+    if age >= 18 {
+        message = "You are an adult"
+    } else {
+        message = "You are a minor"
+    }
+
+    return message
 }
 
-print("Squared numbers: \(squaredNumbers)")
+func determineGrade(score: Int) -> String {
+    var grade: String
 
-let names = ["Alice", "Bob", "Charlie"]
-var upperCaseNames: [String] = []
+    if score >= 70 {
+        grade = "Pass"
+    } else {
+        grade = "Fail"
+    }
 
-for name in names {
-    let upperCaseName = name.uppercased()
-    upperCaseNames.append(upperCaseName)
+    return grade
 }
 
-print("Uppercase names: \(upperCaseNames)")
+print(checkAge(age: 20))
+print(determineGrade(score: 65))
