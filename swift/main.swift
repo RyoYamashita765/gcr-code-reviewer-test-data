@@ -1,41 +1,29 @@
 import Foundation
 
-class Animal {
-    var name: String
-    
-    init(name: String) {
-        self.name = name
-    }
-    
-    func makeSound() {
-        print("Some generic animal sound")
+class DatabaseManager {
+    func saveData(_ data: String) {
+        print("Saving data: \(data)")
     }
 }
 
-class Dog: Animal {
-    override func makeSound() {
-        print("Woof!")
-    }
-    
-    func fetch() {
-        print("\(name) is fetching.")
+class NetworkManager {
+    func sendData(_ data: String) {
+        print("Sending data: \(data)")
     }
 }
 
-class Cat: Animal {
-    override func makeSound() {
-        print("Meow!")
-    }
-    
-    func scratch() {
-        print("\(name) is scratching.")
+class DataProcessor {
+    let databaseManager = DatabaseManager()
+    let networkManager = NetworkManager()
+
+    func processData(_ data: String) {
+        let processedData = data.uppercased()
+
+        databaseManager.saveData(processedData)
+
+        networkManager.sendData(processedData)
     }
 }
 
-let myDog = Dog(name: "Buddy")
-myDog.makeSound()
-myDog.fetch()
-
-let myCat = Cat(name: "Whiskers")
-myCat.makeSound()
-myCat.scratch()
+let processor = DataProcessor()
+processor.processData("Hello, World!")
