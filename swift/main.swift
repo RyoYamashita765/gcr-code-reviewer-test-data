@@ -1,25 +1,41 @@
 import Foundation
 
-class Car {
-    var brand: String
-    var model: String
-    var year: Int
+class Animal {
+    var name: String
     
-    init(brand: String, model: String, year: Int) {
-        self.brand = brand
-        self.model = model
-        self.year = year
+    init(name: String) {
+        self.name = name
     }
     
-    func startEngine() {
-        print("The \(brand) \(model) engine is starting...")
-    }
-    
-    func stopEngine() {
-        print("The \(brand) \(model) engine is stopping...")
+    func makeSound() {
+        print("Some generic animal sound")
     }
 }
 
-let myCar = Car(brand: "FooBar", model: "HogePiyo", year: 2022)
-myCar.startEngine()
-myCar.stopEngine()
+class Dog: Animal {
+    override func makeSound() {
+        print("Woof!")
+    }
+    
+    func fetch() {
+        print("\(name) is fetching.")
+    }
+}
+
+class Cat: Animal {
+    override func makeSound() {
+        print("Meow!")
+    }
+    
+    func scratch() {
+        print("\(name) is scratching.")
+    }
+}
+
+let myDog = Dog(name: "Buddy")
+myDog.makeSound()
+myDog.fetch()
+
+let myCat = Cat(name: "Whiskers")
+myCat.makeSound()
+myCat.scratch()
