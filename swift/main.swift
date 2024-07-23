@@ -1,35 +1,49 @@
 import Foundation
 
-func processOrder(item: String?, quantity: Int?, isVIP: Bool) {
-    if let item = item {
-        if let quantity = quantity {
-            if quantity > 0 {
-                if isVIP {
-                    if quantity > 10 {
-                        print("VIP discount applied for bulk order of \(item)")
-                    } else {
-                        print("Standard VIP discount applied for \(item)")
-                    }
-                } else {
-                    if quantity > 20 {
-                        print("Bulk discount applied for order of \(item)")
-                    } else {
-                        print("Processing standard order for \(item)")
-                    }
-                }
-            } else {
-                print("Invalid quantity. Must be greater than 0.")
-            }
-        } else {
-            print("Quantity not specified")
-        }
+func calculateGrade(score: Int) -> String {
+    if score >= 90 {
+        return "A"
     } else {
-        print("Item not specified")
+        if score >= 80 {
+            return "B"
+        } else {
+            if score >= 70 {
+                return "C"
+            } else {
+                if score >= 60 {
+                    return "D"
+                } else {
+                    return "F"
+                }
+            }
+        }
     }
 }
 
-processOrder(item: "Laptop", quantity: 15, isVIP: true)
-processOrder(item: "Phone", quantity: 5, isVIP: false)
-processOrder(item: nil, quantity: 3, isVIP: true)
-processOrder(item: "Tablet", quantity: nil, isVIP: false)
-processOrder(item: "Desktop", quantity: 0, isVIP: true)
+func processPayment(amount: Double, balance: Double) {
+    if amount <= balance {
+        print("Payment processed successfully")
+    } else {
+        print("Insufficient funds")
+    }
+}
+
+func determineShippingCost(distance: Double, isExpedited: Bool) -> Double {
+    if isExpedited {
+        if distance < 100 {
+            return 15.0
+        } else {
+            return 25.0
+        }
+    } else {
+        if distance < 100 {
+            return 5.0
+        } else {
+            return 10.0
+        }
+    }
+}
+
+print(calculateGrade(score: 85))
+processPayment(amount: 100, balance: 150)
+print(determineShippingCost(distance: 150, isExpedited: true))
