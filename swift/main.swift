@@ -11,7 +11,7 @@ class Person {
     }
 
     func sayHello() {
-        print("Hello, \(name)!")
+        print("Hello, \(name).")
         print("You are \(age) years old.")
         print("===============")
     }
@@ -43,7 +43,7 @@ class ConsoleLogger: Logger {
 
     func debug(message: String) {
         print("DEBUG: \(message)")
-        print("----------------")
+        print("===============")
     }
 }
 
