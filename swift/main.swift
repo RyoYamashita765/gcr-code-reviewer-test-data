@@ -1,9 +1,29 @@
 import Foundation
 
+class Car {
+    var brand: String
+    var model: String
+    var year: Int
+    
+    init(brand: String, model: String, year: Int) {
+        self.brand = brand
+        self.model = model
+        self.year = year
+    }
+    
+    func startEngine() {
+        print("The \(brand) \(model) engine is starting...")
+    }
+    
+    func stopEngine() {
+        print("The \(brand) \(model) engine is stopping...")
+    }
+}
+
 func main(){
-    let radius = 5.0
-    let area = 3.141592 * radius * radius
-    print("The area: \(area)")
+    let myCar = Car(brand: "FooBar", model: "HogePiyo", year: 2022)
+    myCar.startEngine()
+    myCar.stopEngine()
 }
 
 main()
