@@ -1,39 +1,39 @@
 import Foundation
 
-struct User {
-    let id: Int
-    let name: String?
-    let email: String?
-}
-
-func processUserData(users: [User]) {
-    for user in users {
-        let userName = user.name!
-        let userEmail = user.email!
-        
-        print("User \(user.id): \(userName), Email: \(userEmail)")
-        
-        let emailComponents = userEmail.split(separator: "@")
-        let domain = emailComponents[1]
-        
-        print("Email domain: \(domain)")
+func processOrder(item: String?, quantity: Int?, isVIP: Bool) {
+    if let item = item {
+        if let quantity = quantity {
+            if quantity > 0 {
+                if isVIP {
+                    if quantity > 10 {
+                        print("VIP discount applied for bulk order of \(item)")
+                    } else {
+                        print("Standard VIP discount applied for \(item)")
+                    }
+                } else {
+                    if quantity > 20 {
+                        print("Bulk discount applied for order of \(item)")
+                    } else {
+                        print("Processing standard order for \(item)")
+                    }
+                }
+            } else {
+                print("Invalid quantity. Must be greater than 0.")
+            }
+        } else {
+            print("Quantity not specified")
+        }
+    } else {
+        print("Item not specified")
     }
 }
 
 func main(){
-    // case 1
-    let users = [
-        User(id: 1, name: "Alice", email: "alice@example.com"),
-        User(id: 2, name: nil, email: "bob@example.com"),
-        User(id: 3, name: "Charlie", email: nil),
-        User(id: 4, name: "David", email: "david@invalid")
-    ]
-    processUserData(users: users)
-
-    // case 2
-    let allScores = [85, 92, 78, 95, 88]
-    let p = 6
-    print("allScores[p] = \(allScores[p])")
+    processOrder(item: "Laptop", quantity: 15, isVIP: true)
+    processOrder(item: "Phone", quantity: 5, isVIP: false)
+    processOrder(item: nil, quantity: 3, isVIP: true)
+    processOrder(item: "Tablet", quantity: nil, isVIP: false)
+    processOrder(item: "Desktop", quantity: 0, isVIP: true)
 }
 
 main()
