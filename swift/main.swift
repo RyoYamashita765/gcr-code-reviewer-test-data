@@ -8,7 +8,6 @@ func main(){
         print(arguments[i])
         print(arguments[i].count)
         print("--------------------")
-        print("--")
     }
 }
 
