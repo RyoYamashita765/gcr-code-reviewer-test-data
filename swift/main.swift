@@ -13,6 +13,7 @@ class Person {
     func sayHello() {
         print("Hello, \(name)!")
         print("You are \(age) years old.")
+        print("----------------")
     }
 }
 
@@ -25,6 +26,7 @@ protocol Logger {
 class ConsoleLogger: Logger {
     func info(message: String) {
         print("INFO: \(message)")
+        print("----------------")
     }
 
     func warning(message: String) {
