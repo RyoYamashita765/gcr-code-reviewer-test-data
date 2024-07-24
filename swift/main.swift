@@ -6,7 +6,7 @@ func main(){
     print("--------------------")
     print("Hello, World!")
     print("Hello, Swift!")
-    print("Goodbye, Swift!")
+    print("Goodbye......!")
     print("Goodbye, World!")
     print("--------------------")
     print("End of Programming Test")
