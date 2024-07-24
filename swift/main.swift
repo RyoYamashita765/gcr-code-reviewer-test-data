@@ -6,8 +6,6 @@ func main(){
         print("--")
         print("--- Arguments ---")
         print(arguments[i])
-        print(arguments[i].count)
-        print("--------------------")
     }
 }
 
