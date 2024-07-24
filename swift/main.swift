@@ -6,7 +6,7 @@ switch CommandLine.arguments.count {
         print("------------")
         print("No arguments")
     case 2:
-        print("------------")
+        print("============")
         print("One argument")
         print(CommandLine.arguments[1])
     default:
