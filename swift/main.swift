@@ -5,6 +5,8 @@ func main(){
     for argument in arguments {
         print("--------------------")
         print(argument)
+        print("--------------------")
+        print("")
     }
 }
 
