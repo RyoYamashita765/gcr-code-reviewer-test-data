@@ -15,13 +15,7 @@ class Person {
     }
 }
 
-protocol Logger {
-    func info(message: String)
-    func warning(message: String)
-    func error(message: String)
-}
-
-class ConsoleLogger: Logger {
+class ConsoleLogger {
     var logLevel: Int = 0
 
     func info(message: String) {
