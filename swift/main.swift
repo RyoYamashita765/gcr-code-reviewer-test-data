@@ -7,6 +7,8 @@ func main(){
         print("Hello, \(arguments[1])!")
     } else {
         print("Hello, World!")
+        print("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+        print("Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
     }
 }
 
