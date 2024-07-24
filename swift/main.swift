@@ -1,11 +1,11 @@
 import Foundation
 
 func main(){
-switch CommandLine.argc {
+switch CommandLine.argc - 1 {
     case 0:
         print("------------")
         print("No arguments")
-    case 2:
+    case 1:
         print("============")
         print("One argument")
         print(CommandLine.arguments[1])
