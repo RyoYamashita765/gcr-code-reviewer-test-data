@@ -1,16 +1,7 @@
 import Foundation
 
 func main(){
-switch CommandLine.argc - 1 {
-    case 0:
-        print("No arguments")
-    case 1:
-        print("One argument")
-        print(CommandLine.arguments[1])
-    default:
-        print("Many arguments")
-        print(CommandLine.arguments[1])
-    }
+
 }
 
 main()
