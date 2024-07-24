@@ -6,8 +6,6 @@ func main(){
         print("--- Command Line Arguments ---")
         print("Argument's count: \(arguments.count)")
         print("Hello, \(arguments[1])!")
-        print("Lorem ipsum dolor sit amet,")
-        print("consectetur adipiscing elit.")
     } else {
         print("=== No Arguments ===")
         print("Hello, Swift World!")
