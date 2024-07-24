@@ -1,25 +1,32 @@
 import Foundation
 
+func checkAge(age: Int) -> String {
+    var message: String
+
+    if age >= 18 {
+        message = "You are an adult"
+    } else {
+        message = "You are a minor"
+    }
+
+    return message
+}
+
+func determineGrade(score: Int) -> String {
+    var grade: String
+
+    if score >= 70 {
+        grade = "Pass"
+    } else {
+        grade = "Fail"
+    }
+
+    return grade
+}
+
 func main(){
-    let numbers = [1, 2, 3, 4, 5]
-    var squaredNumbers: [Int] = []
-
-    for number in numbers {
-        let squared = number * number
-        squaredNumbers.append(squared)
-    }
-
-    print("Squared numbers: \(squaredNumbers)")
-
-    let names = ["Alice", "Bob", "Charlie"]
-    var upperCaseNames: [String] = []
-
-    for name in names {
-        let upperCaseName = name.uppercased()
-        upperCaseNames.append(upperCaseName)
-    }
-
-    print("Uppercase names: \(upperCaseNames)")
+    print(checkAge(age: 20))
+    print(determineGrade(score: 65))
 }
 
 main()
