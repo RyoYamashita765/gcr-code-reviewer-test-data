@@ -15,6 +15,10 @@ class Person {
         print("You are \(age) years old.")
         print("----------------")
     }
+
+    func setName(name: String) {
+        self.name = name
+    }
 }
 
 protocol Logger {
@@ -35,6 +39,11 @@ class ConsoleLogger: Logger {
 
     func error(message: String) {
         print("ERROR: \(message)")
+    }
+
+    func debug(message: String) {
+        print("DEBUG: \(message)")
+        print("----------------")
     }
 }
 
