@@ -15,10 +15,6 @@ class Person {
         print("You are \(age) years old.")
         print("===============")
     }
-
-    func setName(name: String) {
-        self.name = name
-    }
 }
 
 protocol Logger {
