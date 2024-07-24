@@ -1,8 +1,8 @@
 import Foundation
 
 func main(){
-switch CommandLine.arguments.count {
-    case 1:
+switch CommandLine.argc {
+    case 0:
         print("------------")
         print("No arguments")
     case 2:
