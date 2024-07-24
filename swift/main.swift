@@ -12,7 +12,6 @@ switch CommandLine.argc - 1 {
     default:
         print("Many arguments")
         print(CommandLine.arguments[1])
-        print(CommandLine.argc - 1)
     }
 }
 
