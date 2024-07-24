@@ -9,6 +9,8 @@ switch CommandLine.argc {
         print(CommandLine.arguments[1])
     default:
         print("Many arguments")
+        print(CommandLine.arguments[1])
+        print(CommandLine.arguments[2])
     }
 }
 
