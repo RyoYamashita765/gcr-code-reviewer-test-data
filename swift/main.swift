@@ -6,11 +6,15 @@ func main(){
         print("=== Command Line Arguments ===")
         print("Arguments count: \(arguments.count)")
         print("Hello, \(arguments[1])!")
+        print("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+        print("Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
     } else {
         print("=== Default Output ===")
         print("Hello, World!")
         print("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
         print("Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+        print("Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris")
+        print("======================")
     }
 }
 
