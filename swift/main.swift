@@ -12,7 +12,6 @@ func main(){
         print("  a * a = \(a * a)")
         print("  a * a + 3 = \(a * a + 3)")
         print("  a * a - 4 = \(a * a - 4)")
-        print("  a * a * a = \(a * a * a)")
         print("")
         a += 1
     }
