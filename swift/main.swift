@@ -10,7 +10,6 @@ func main(){
     print("Goodbye, World!")
     print("End")
     print("======= END ========")
-    print("====================")
 }
 
 main()
