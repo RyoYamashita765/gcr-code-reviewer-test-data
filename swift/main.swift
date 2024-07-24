@@ -2,11 +2,11 @@ import Foundation
 
 func main(){
     let arguments = CommandLine.arguments
-    for argument in arguments {
+    for i in 0..<arguments.count {
         print("")
         print("--------------------")
-        print(argument)
-        print(argument.count)
+        print(arguments[i])
+        print(arguments[i].count)
         print("--------------------")
         print("")
     }
