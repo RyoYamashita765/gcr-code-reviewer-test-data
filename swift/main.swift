@@ -13,7 +13,6 @@ func main(){
         print("Hello, Swift World!")
         print("Lorem ipsum dolor sit amet,")
         print("consectetur adipiscing elit.")
-        print("Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris")
         print("======================")
     }
 }
