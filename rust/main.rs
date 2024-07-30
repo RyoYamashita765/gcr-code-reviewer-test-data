@@ -34,10 +34,6 @@ impl ConsoleLogger {
         println!("ERROR: {}", message);
         println!("  Please contact your system administrator.");
     }
-
-    fn debug(&self, message: &str) {
-        println!("DEBUG: {}", message);
-    }
 }
 
 fn main() {
@@ -50,5 +46,4 @@ fn main() {
     logger.info("This is an info message.");
     logger.warn("This is a warning message.");
     logger.error("This is an error message.");
-    logger.debug("This is a debug message.");
 }
