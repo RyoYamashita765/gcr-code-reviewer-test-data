@@ -3,10 +3,10 @@ fn main() {
     let args: Vec<String> = std::env::args().collect();
     if args.len() >= 2 {
         println!("You passed {} arguments", args.len() - 1);
-        println!("args: {:?}", args);
+        println!("arguments: {:?}", args);
         println!("--------------------");
     } else {
         println!("You passed no arguments");
-        println!("====================");
+        println!("--------------------");
     }
 }
