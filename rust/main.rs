@@ -18,16 +18,9 @@ impl Person {
     }
 }
 
-trait Logger {
-    fn info(&self, message: &str);
-    fn warn(&self, message: &str);
-    fn error(&self, message: &str);
-    fn debug(&self, message: &str);
-}
-
 struct ConsoleLogger;
 
-impl Logger for ConsoleLogger {
+impl ConsoleLogger {
     fn info(&self, message: &str) {
         println!("INFO: {}", message);
     }
