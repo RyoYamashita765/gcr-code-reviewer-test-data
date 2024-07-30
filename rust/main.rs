@@ -20,7 +20,7 @@ impl Person {
 
 trait Logger {
     fn info(&self, message: &str);
-    fn warning(&self, message: &str);
+    fn warn(&self, message: &str);
     fn error(&self, message: &str);
     fn debug(&self, message: &str);
 }
@@ -32,7 +32,7 @@ impl Logger for ConsoleLogger {
         println!("INFO: {}", message);
     }
 
-    fn warning(&self, message: &str) {
+    fn warn(&self, message: &str) {
         println!("WARNING: {}", message);
         println!("  Please proceed with caution.");
     }
@@ -55,7 +55,7 @@ fn main() {
 
     let logger = ConsoleLogger;
     logger.info("This is an info message.");
-    logger.warning("This is a warning message.");
+    logger.warn("This is a warning message.");
     logger.error("This is an error message.");
     logger.debug("This is a debug message.");
 }
