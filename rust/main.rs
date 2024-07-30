@@ -4,7 +4,6 @@ fn main() {
     match args.len() {
         1 => {
             println!("No arguments provided");
-            println!("Exiting...");
         },
         2 => {
             println!("One argument provided");
