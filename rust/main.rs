@@ -1,8 +1,8 @@
 fn main() {
     println!("Hello, world!");
     let args: Vec<String> = std::env::args().collect();
-    match args.len() - 1 {
-        0 => {
+    match args.len() {
+        1 => {
             println!("No arguments provided");
             println!("Arguments: {:?}", args);
         },
