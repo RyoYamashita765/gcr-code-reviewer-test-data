@@ -4,7 +4,9 @@ fn main() {
     if args.len() > 1 {
         println!("You passed {} arguments", args.len() - 1);
         println!("args: {:?}", args);
+        println!("====================");
     } else {
         println!("You passed no arguments");
+        println!("====================");
     }
 }
