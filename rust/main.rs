@@ -7,11 +7,9 @@ fn main() {
         },
         2 => {
             println!("One argument provided");
-            println!("Arguments: {:?}", args);
         },
         _ => {
             println!("More than one argument provided");
-            println!("Arguments count: {}", args.len() - 1);
         },
     }
 }
