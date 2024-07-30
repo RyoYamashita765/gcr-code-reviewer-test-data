@@ -1,7 +1,7 @@
 fn main() {
     println!("Hello, world!");
     let args: Vec<String> = std::env::args().collect();
-    if args.len() > 1 {
+    if args.len() >= 2 {
         println!("You passed {} arguments", args.len() - 1);
         println!("args: {:?}", args);
         println!("====================");
