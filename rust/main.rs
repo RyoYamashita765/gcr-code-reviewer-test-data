@@ -4,7 +4,7 @@ fn main() {
     match args.len() {
         1 => {
             println!("No arguments provided");
-            println!("Arguments: {:?}", args);
+            println!("Exiting...");
         },
         2 => {
             println!("One argument provided");
@@ -12,7 +12,7 @@ fn main() {
         },
         _ => {
             println!("More than one argument provided");
-            println!("Arguments: {:?}", args);
+            println!("Arguments count: {}", args.len() - 1);
         },
     }
 }
