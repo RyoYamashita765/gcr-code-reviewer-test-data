@@ -10,6 +10,7 @@ fn main() {
         },
         _ => {
             println!("More than one argument provided");
+            println!("Arguments: {:?}", args);
         },
     }
 }
