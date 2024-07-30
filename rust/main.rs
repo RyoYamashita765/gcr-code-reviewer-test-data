@@ -8,7 +8,7 @@ impl Person {
         Person { name, age }
     }
 
-    fn say_hello(&self) {
+    fn say_hello_method(&self) {
         println!("Hello, {}.", self.name);
         println!("  {} years old.", self.age);
     }
@@ -50,7 +50,7 @@ impl Logger for ConsoleLogger {
 fn main() {
     let person = Person::new(String::from("John"), 30);
     println!("Person: {}, {}", person.name, person.age);
-    person.say_hello();
+    person.say_hello_method();
     println!("Person's name: {}", person.get_name());
 
     let logger = ConsoleLogger;
