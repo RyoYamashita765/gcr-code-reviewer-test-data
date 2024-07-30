@@ -32,6 +32,7 @@ impl Logger for ConsoleLogger {
 
     fn error(&self, message: &str) {
         println!("ERROR: {}", message);
+        println!("Please contact the system administrator.");
     }
 }
 
