@@ -4,7 +4,6 @@ fn main() {
     for i in 1..args.len() {
         println!("  {}", args[i]);
         println!("---");
-        println!("///");
         println!("   ");
     }
 }
