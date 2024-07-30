@@ -9,7 +9,7 @@ impl Person {
     }
 
     fn say_hello(&self) {
-        println!("Hello, my name is {}.", self.name);
+        println!("Hello, {}.", self.name);
         println!("I am {} years old.", self.age);
     }
 
