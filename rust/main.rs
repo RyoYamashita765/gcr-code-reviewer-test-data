@@ -10,7 +10,7 @@ impl Person {
 
     fn say_hello(&self) {
         println!("Hello, {}.", self.name);
-        println!("I am {} years old.", self.age);
+        println!("  {} years old.", self.age);
     }
 
     fn get_name(&self) -> &String {
@@ -34,12 +34,12 @@ impl Logger for ConsoleLogger {
 
     fn warning(&self, message: &str) {
         println!("WARNING: {}", message);
-        println!("Please proceed with caution.");
+        println!("  Please proceed with caution.");
     }
 
     fn error(&self, message: &str) {
         println!("ERROR: {}", message);
-        println!("Please contact the system administrator.");
+        println!("  Please contact your system administrator.");
     }
 
     fn debug(&self, message: &str) {
