@@ -4,5 +4,7 @@ fn main() {
     for arg in args {
         println!("  argument: {}", arg);
         println!("---");
+        println!("===");
+        println!("+++");
     }
 }
