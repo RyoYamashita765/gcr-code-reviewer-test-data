@@ -1,35 +1,43 @@
-fn process_order(item: Option<&str>, quantity: Option<i32>, is_vip: bool) {
-    if let Some(item) = item {
-        if let Some(quantity) = quantity {
-            if quantity > 0 {
-                if is_vip {
-                    if quantity > 10 {
-                        println!("VIP discount applied for bulk order of {}", item);
-                    } else {
-                        println!("Standard VIP discount applied for {}", item);
-                    }
-                } else {
-                    if quantity > 20 {
-                        println!("Bulk discount applied for order of {}", item);
-                    } else {
-                        println!("Processing standard order for {}", item);
-                    }
-                }
-            } else {
-                println!("Invalid quantity. Must be greater than 0.");
-            }
+fn calculate_grade(score: i32) -> String {
+    if score >= 90 {
+        "A".to_string()
+    } else if score >= 80 {
+        "B".to_string()
+    } else if score >= 70 {
+        "C".to_string()
+    } else if score >= 60 {
+        "D".to_string()
+    } else {
+        "F".to_string()
+    }
+}
+
+fn process_payment(amount: f64, balance: f64) {
+    if amount <= balance {
+        println!("Payment processed successfully");
+    } else {
+        println!("Insufficient funds");
+    }
+}
+
+fn determine_shipping_cost(distance: f64, is_expedited: bool) -> f64 {
+    if is_expedited {
+        if distance < 100.0 {
+            15.0
         } else {
-            println!("Quantity not specified");
+            25.0
         }
     } else {
-        println!("Item not specified");
+        if distance < 100.0 {
+            5.0
+        } else {
+            10.0
+        }
     }
 }
 
 fn main() {
-    process_order(Some("Laptop"), Some(15), true);
-    process_order(Some("Phone"), Some(5), false);
-    process_order(None, Some(3), true);
-    process_order(Some("Tablet"), None, false);
-    process_order(Some("Desktop"), Some(0), true);
+    println!("{}", calculate_grade(85));
+    process_payment(100.0, 150.0);
+    println!("{}", determine_shipping_cost(150.0, true));
 }
