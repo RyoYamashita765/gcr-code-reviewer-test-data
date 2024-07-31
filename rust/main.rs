@@ -1,21 +1,28 @@
+fn check_age(age: i32) -> String {
+    let message: String;
+
+    if age >= 18 {
+        message = String::from("You are an adult");
+    } else {
+        message = String::from("You are a minor");
+    }
+
+    message
+}
+
+fn determine_grade(score: i32) -> String {
+    let grade: String;
+
+    if score >= 70 {
+        grade = String::from("Pass");
+    } else {
+        grade = String::from("Fail");
+    }
+
+    grade
+}
+
 fn main() {
-    let numbers = vec![1, 2, 3, 4, 5];
-    let mut squared_numbers: Vec<i32> = Vec::new();
-
-    for number in numbers {
-        let squared = number * number;
-        squared_numbers.push(squared);
-    }
-
-    println!("Squared numbers: {:?}", squared_numbers);
-
-    let names = vec!["Alice", "Bob", "Charlie"];
-    let mut uppercase_names: Vec<String> = Vec::new();
-
-    for name in names {
-        let uppercase_name = name.to_uppercase();
-        uppercase_names.push(uppercase_name);
-    }
-
-    println!("Uppercase names: {:?}", uppercase_names);
+    println!("{}", check_age(20));
+    println!("{}", determine_grade(65));
 }
