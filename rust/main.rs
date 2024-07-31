@@ -1,63 +1,41 @@
-trait Animal {
-    fn new(name: String) -> Self;
-    fn name(&self) -> &str;
-    fn make_sound(&self);
-}
+struct DatabaseManager;
 
-struct Dog {
-    name: String,
-}
-
-impl Animal for Dog {
-    fn new(name: String) -> Self {
-        Dog { name }
-    }
-
-    fn name(&self) -> &str {
-        &self.name
-    }
-
-    fn make_sound(&self) {
-        println!("Woof!");
+impl DatabaseManager {
+    fn save_data(&self, data: &str) {
+        println!("Saving data: {}", data);
     }
 }
 
-impl Dog {
-    fn fetch(&self) {
-        println!("{} is fetching.", self.name);
+struct NetworkManager;
+
+impl NetworkManager {
+    fn send_data(&self, data: &str) {
+        println!("Sending data: {}", data);
     }
 }
 
-struct Cat {
-    name: String,
+struct DataProcessor {
+    database_manager: DatabaseManager,
+    network_manager: NetworkManager,
 }
 
-impl Animal for Cat {
-    fn new(name: String) -> Self {
-        Cat { name }
+impl DataProcessor {
+    fn new() -> Self {
+        DataProcessor {
+            database_manager: DatabaseManager,
+            network_manager: NetworkManager,
+        }
     }
 
-    fn name(&self) -> &str {
-        &self.name
-    }
+    fn process_data(&self, data: &str) {
+        let processed_data = data.to_uppercase();
 
-    fn make_sound(&self) {
-        println!("Meow!");
-    }
-}
-
-impl Cat {
-    fn scratch(&self) {
-        println!("{} is scratching.", self.name);
+        self.database_manager.save_data(&processed_data);
+        self.network_manager.send_data(&processed_data);
     }
 }
 
 fn main() {
-    let my_dog = Dog::new(String::from("Buddy"));
-    my_dog.make_sound();
-    my_dog.fetch();
-
-    let my_cat = Cat::new(String::from("Whiskers"));
-    my_cat.make_sound();
-    my_cat.scratch();
+    let processor = DataProcessor::new();
+    processor.process_data("Hello, World!");
 }
