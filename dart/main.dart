@@ -1,35 +1,43 @@
-void processOrder(String? item, int? quantity, bool isVip) {
-  if (item != null) {
-    if (quantity != null) {
-      if (quantity > 0) {
-        if (isVip) {
-          if (quantity > 10) {
-            print('VIP discount applied for bulk order of $item');
-          } else {
-            print('Standard VIP discount applied for $item');
-          }
-        } else {
-          if (quantity > 20) {
-            print('Bulk discount applied for order of $item');
-          } else {
-            print('Processing standard order for $item');
-          }
-        }
-      } else {
-        print('Invalid quantity. Must be greater than 0.');
-      }
+String calculateGrade(int score) {
+  if (score >= 90) {
+    return 'A';
+  } else if (score >= 80) {
+    return 'B';
+  } else if (score >= 70) {
+    return 'C';
+  } else if (score >= 60) {
+    return 'D';
+  } else {
+    return 'F';
+  }
+}
+
+void processPayment(double amount, double balance) {
+  if (amount <= balance) {
+    print('Payment processed successfully');
+  } else {
+    print('Insufficient funds');
+  }
+}
+
+double determineShippingCost(double distance, bool isExpedited) {
+  if (isExpedited) {
+    if (distance < 100.0) {
+      return 15.0;
     } else {
-      print('Quantity not specified');
+      return 25.0;
     }
   } else {
-    print('Item not specified');
+    if (distance < 100.0) {
+      return 5.0;
+    } else {
+      return 10.0;
+    }
   }
 }
 
 void main() {
-  processOrder('Laptop', 15, true);
-  processOrder('Phone', 5, false);
-  processOrder(null, 3, true);
-  processOrder('Tablet', null, false);
-  processOrder('Desktop', 0, true);
+  print(calculateGrade(85));
+  processPayment(100.0, 150.0);
+  print(determineShippingCost(150.0, true));
 }
