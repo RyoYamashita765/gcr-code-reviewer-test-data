@@ -1,28 +1,37 @@
-String checkAge(int age) {
-  String message;
+class User {
+  final int id;
+  final String? name;
+  final String? email;
 
-  if (age >= 18) {
-    message = 'You are an adult';
-  } else {
-    message = 'You are a minor';
-  }
-
-  return message;
+  User({required this.id, this.name, this.email});
 }
 
-String determineGrade(int score) {
-  String grade;
+void processUserData(List<User> users) {
+  for (var user in users) {
+    final userName = user.name ?? '';
+    final userEmail = user.email ?? '';
 
-  if (score >= 70) {
-    grade = 'Pass';
-  } else {
-    grade = 'Fail';
+    print('User ${user.id}: $userName, Email: $userEmail');
+
+    final emailComponents = userEmail.split('@');
+    final domain = emailComponents.length > 1 ? emailComponents[1] : '';
+
+    print('Email domain: $domain');
   }
-
-  return grade;
 }
 
 void main() {
-  print(checkAge(20));
-  print(determineGrade(65));
+  // case 1
+  final users = [
+    User(id: 1, name: 'Alice', email: 'alice@example.com'),
+    User(id: 2, name: null, email: 'bob@example.com'),
+    User(id: 3, name: 'Charlie', email: null),
+    User(id: 4, name: 'David', email: 'david@invalid'),
+  ];
+  processUserData(users);
+
+  // case 2
+  final allScores = [85, 92, 78, 95, 88];
+  final p = 6;
+  print('allScores[$p] = ${allScores[p]}');
 }
