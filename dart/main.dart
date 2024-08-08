@@ -1,20 +1,5 @@
-class Person {
-  String name;
-  int age;
-  Person(this.name, this.age);
-}
-
-class Dog {
-  void bark() {
-    print('Bark!');
-    print('\n');
-  }
-}
-
 void main() {
-  final person = Person('Alice', 30);
-  print('Name: ${person.name}, Age: ${person.age}');
-
-  final dog = Dog();
-  dog.bark();
+  const radius = 5.0;
+  const area = 3.141592 * radius * radius;
+  print('The area of the circle is $area');
 }
