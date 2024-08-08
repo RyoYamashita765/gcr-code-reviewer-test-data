@@ -1,3 +1,8 @@
 void main() {
-  const pets = ['cat', 'dog', 'fish'];
+  var pets = ['cat', 'dog', 'fish'];
+
+  while (pets.isNotEmpty) {
+    print('I have a ${pets.last}');
+    pets.removeLast();
+  }
 }
