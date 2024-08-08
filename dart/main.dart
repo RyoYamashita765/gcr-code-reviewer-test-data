@@ -10,7 +10,7 @@ void main() {
       print('woof!');
       print('bark');
       break;
-    case 'fish':
+    case 'bird':
       print('...');
       break;
     default:
