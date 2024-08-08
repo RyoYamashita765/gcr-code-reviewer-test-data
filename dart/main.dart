@@ -5,5 +5,6 @@ void main() {
     print('The pets list contains a cat.');
   } else {
     print('The pets list does not contain a cat.');
+    print('The pets list contains: $pets');
   }
 }
