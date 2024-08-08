@@ -6,6 +6,7 @@ class Person {
   void sayHello() {
     print('Hello, my name is $name.');
     print('I am $age years old.');
+    print('');
   }
 }
 
@@ -16,6 +17,7 @@ abstract class Animal {
 class Dog implements Animal {
   void makeSound() {
     print('Bark!');
+    print('');
   }
 }
 
