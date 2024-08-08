@@ -8,7 +8,7 @@ void main() {
       break;
     case 'dog':
       print('woof!');
-      print('bark');
+      print('bow wow');
       break;
     case 'fish':
       print('...');
