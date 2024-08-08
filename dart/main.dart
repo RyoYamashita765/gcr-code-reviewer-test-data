@@ -15,12 +15,7 @@ class Person {
   }
 }
 
-abstract class Animal {
-  void bark();
-  void ear();
-}
-
-class Dog implements Animal {
+class Dog {
   void bark() {
     print('Bark!');
     print('\n');
