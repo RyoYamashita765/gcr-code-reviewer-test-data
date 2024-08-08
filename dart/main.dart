@@ -8,11 +8,6 @@ class Person {
     print('I am $age years old.');
     print('\n');
   }
-
-  void sayGoodbye() {
-    print('Goodbye!');
-    print('');
-  }
 }
 
 class Dog {
