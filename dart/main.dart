@@ -1,50 +1,32 @@
-abstract class Animal {
-  String name();
-  void makeSound();
-}
-
-class Dog implements Animal {
-  String _name;
-
-  Dog(this._name);
-
-  @override
-  String name() => _name;
-
-  @override
-  void makeSound() {
-    print('Woof!');
-  }
-
-  void fetch() {
-    print('$_name is fetching.');
+class DatabaseManager {
+  void saveData(String data) {
+    print('Saving data: $data');
   }
 }
 
-class Cat implements Animal {
-  String _name;
-
-  Cat(this._name);
-
-  @override
-  String name() => _name;
-
-  @override
-  void makeSound() {
-    print('Meow!');
+class NetworkManager {
+  void sendData(String data) {
+    print('Sending data: $data');
   }
+}
 
-  void scratch() {
-    print('$_name is scratching.');
+class DataProcessor {
+  final DatabaseManager _databaseManager;
+  final NetworkManager _networkManager;
+
+  DataProcessor()
+      : _databaseManager = DatabaseManager(),
+        _networkManager = NetworkManager();
+
+  void processData(String data) {
+    String processedData = data.toUpperCase();
+
+    _databaseManager.saveData(processedData);
+    _networkManager.sendData(processedData);
   }
 }
 
 void main() {
-  var myDog = Dog('Buddy');
-  myDog.makeSound();
-  myDog.fetch();
-
-  var myCat = Cat('Whiskers');
-  myCat.makeSound();
-  myCat.scratch();
+  final processor = DataProcessor();
+  processor.processData('Hello, World!');
 }
