@@ -6,6 +6,5 @@ void main() {
     print('I have ${pets}.');
     pets.remove(pets.last);
     print('Now I have ${pets.length} pets');
-    print('');
   }
 }
