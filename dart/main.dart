@@ -5,6 +5,5 @@ void main() {
     print('Pet $i:  ');
     print(pets[i]);
     print('---');
-    print('---');
   }
 }
