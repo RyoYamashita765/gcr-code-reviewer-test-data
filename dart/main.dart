@@ -1,3 +1,10 @@
+class Person {
+  String name;
+  int age;
+  Person(this.name, this.age);
+}
+
 void main() {
-  var pets = ['cat', 'dog', 'fish'];
+  final person = Person('Alice', 30);
+  print('Name: ${person.name}, Age: ${person.age}');
 }
