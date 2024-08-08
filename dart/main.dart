@@ -1,7 +1,7 @@
 void main() {
   const pets = ['cat', 'dog', 'fish'];
 
-  switch (pets[1]) {
+  switch (pets[0]) {
     case 'cat':
       print('meow!');
       print('purr');
@@ -10,7 +10,7 @@ void main() {
       print('woof!');
       print('bark');
       break;
-    case 'bird':
+    case 'fish':
       print('...');
       break;
     default:
