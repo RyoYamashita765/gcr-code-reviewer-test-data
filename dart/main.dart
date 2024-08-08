@@ -1,21 +1,50 @@
-class Car {
-  String brand;
-  String model;
-  int year;
+abstract class Animal {
+  String name();
+  void makeSound();
+}
 
-  Car({required this.brand, required this.model, required this.year});
+class Dog implements Animal {
+  String _name;
 
-  void startEngine() {
-    print('The $brand $model engine is starting...');
+  Dog(this._name);
+
+  @override
+  String name() => _name;
+
+  @override
+  void makeSound() {
+    print('Woof!');
   }
 
-  void stopEngine() {
-    print('The $brand $model engine is stopping...');
+  void fetch() {
+    print('$_name is fetching.');
+  }
+}
+
+class Cat implements Animal {
+  String _name;
+
+  Cat(this._name);
+
+  @override
+  String name() => _name;
+
+  @override
+  void makeSound() {
+    print('Meow!');
+  }
+
+  void scratch() {
+    print('$_name is scratching.');
   }
 }
 
 void main() {
-  Car myCar = Car(brand: 'FooBar', model: 'HogePiyo', year: 2022);
-  myCar.startEngine();
-  myCar.stopEngine();
+  var myDog = Dog('Buddy');
+  myDog.makeSound();
+  myDog.fetch();
+
+  var myCat = Cat('Whiskers');
+  myCat.makeSound();
+  myCat.scratch();
 }
