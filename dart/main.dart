@@ -1,7 +1,7 @@
 void main() {
   const pets = ['cat', 'dog', 'fish'];
 
-  switch (pets[0]) {
+  switch (pets[1]) {
     case 'cat':
       print('meow!');
       print('purr');
