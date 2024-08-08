@@ -1,21 +1,28 @@
+String checkAge(int age) {
+  String message;
+
+  if (age >= 18) {
+    message = 'You are an adult';
+  } else {
+    message = 'You are a minor';
+  }
+
+  return message;
+}
+
+String determineGrade(int score) {
+  String grade;
+
+  if (score >= 70) {
+    grade = 'Pass';
+  } else {
+    grade = 'Fail';
+  }
+
+  return grade;
+}
+
 void main() {
-  List<int> numbers = [1, 2, 3, 4, 5];
-  List<int> squaredNumbers = [];
-
-  for (int number in numbers) {
-    int squared = number * number;
-    squaredNumbers.add(squared);
-  }
-
-  print('Squared numbers: $squaredNumbers');
-
-  List<String> names = ['Alice', 'Bob', 'Charlie'];
-  List<String> uppercaseNames = [];
-
-  for (String name in names) {
-    String uppercaseName = name.toUpperCase();
-    uppercaseNames.add(uppercaseName);
-  }
-
-  print('Uppercase names: $uppercaseNames');
+  print(checkAge(20));
+  print(determineGrade(65));
 }
