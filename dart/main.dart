@@ -13,5 +13,6 @@ void main() {
       break;
     default:
       print('(unknown)');
+      break;
   }
 }
