@@ -1,6 +1,6 @@
 void main() {
-  print('test');
+  print('------------------');
   print('Hello World!');
   print('Goodbye Dart!');
-  print('exit.');
+  print('------------------');
 }
