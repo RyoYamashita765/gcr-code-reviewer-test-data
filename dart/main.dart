@@ -4,7 +4,6 @@ void main() {
   switch (pets[0]) {
     case 'cat':
       print('meow!');
-      print('meow!');
       break;
     case 'dog':
       print('woof!');
@@ -14,6 +13,5 @@ void main() {
       break;
     default:
       print('(unknown)');
-      break;
   }
 }
