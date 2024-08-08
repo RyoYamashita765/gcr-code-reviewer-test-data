@@ -1,32 +1,21 @@
-class DatabaseManager {
-  void saveData(String data) {
-    print('Saving data: $data');
-  }
-}
-
-class NetworkManager {
-  void sendData(String data) {
-    print('Sending data: $data');
-  }
-}
-
-class DataProcessor {
-  final DatabaseManager _databaseManager;
-  final NetworkManager _networkManager;
-
-  DataProcessor()
-      : _databaseManager = DatabaseManager(),
-        _networkManager = NetworkManager();
-
-  void processData(String data) {
-    String processedData = data.toUpperCase();
-
-    _databaseManager.saveData(processedData);
-    _networkManager.sendData(processedData);
-  }
-}
-
 void main() {
-  final processor = DataProcessor();
-  processor.processData('Hello, World!');
+  List<int> numbers = [1, 2, 3, 4, 5];
+  List<int> squaredNumbers = [];
+
+  for (int number in numbers) {
+    int squared = number * number;
+    squaredNumbers.add(squared);
+  }
+
+  print('Squared numbers: $squaredNumbers');
+
+  List<String> names = ['Alice', 'Bob', 'Charlie'];
+  List<String> uppercaseNames = [];
+
+  for (String name in names) {
+    String uppercaseName = name.toUpperCase();
+    uppercaseNames.add(uppercaseName);
+  }
+
+  print('Uppercase names: $uppercaseNames');
 }
