@@ -16,12 +16,12 @@ class Person {
 }
 
 abstract class Animal {
-  void makeSound();
+  void bark();
   void ear();
 }
 
 class Dog implements Animal {
-  void makeSound() {
+  void bark() {
     print('Bark!');
     print('\n');
   }
@@ -38,5 +38,5 @@ void main() {
   person.greet();
 
   final dog = Dog();
-  dog.makeSound();
+  dog.bark();
 }
