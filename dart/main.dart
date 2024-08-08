@@ -4,7 +4,7 @@ class Person {
   Person(this.name, this.age);
 
   void sayHello() {
-    print('Hello, my name is $name.');
+    print('Hello, I am $name.');
     print('I am $age years old.');
     print('');
   }
