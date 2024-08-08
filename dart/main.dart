@@ -8,15 +8,26 @@ class Person {
     print('I am $age years old.');
     print('');
   }
+
+  void sayGoodbye() {
+    print('Goodbye!');
+    print('');
+  }
 }
 
 abstract class Animal {
   void makeSound();
+  void ear();
 }
 
 class Dog implements Animal {
   void makeSound() {
     print('Bark!');
+    print('');
+  }
+
+  void ear() {
+    print('Dog ears');
     print('');
   }
 }
