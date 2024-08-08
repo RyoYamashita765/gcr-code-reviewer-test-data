@@ -1,5 +1,21 @@
+class Car {
+  String brand;
+  String model;
+  int year;
+
+  Car({required this.brand, required this.model, required this.year});
+
+  void startEngine() {
+    print('The $brand $model engine is starting...');
+  }
+
+  void stopEngine() {
+    print('The $brand $model engine is stopping...');
+  }
+}
+
 void main() {
-  const radius = 5.0;
-  const area = 3.141592 * radius * radius;
-  print('The area of the circle is $area');
+  Car myCar = Car(brand: 'FooBar', model: 'HogePiyo', year: 2022);
+  myCar.startEngine();
+  myCar.stopEngine();
 }
