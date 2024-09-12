@@ -11,6 +11,10 @@ export const printHello = () => {
     console.log('Hello');
 }
 
+const printHi = () => {
+    console.log('Hi');
+}
+
 export function printWorld() {
     console.log('World');
 }
