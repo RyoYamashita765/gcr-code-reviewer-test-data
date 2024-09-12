@@ -6,3 +6,11 @@ export class LocalStorage {
         return localStorage.getItem(key);
     }
 }
+
+export const printHello = () => {
+    console.log('Hello');
+}
+
+export function printWorld() {
+    console.log('World');
+}
